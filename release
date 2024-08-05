@@ -1,0 +1,30 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))() 
+
+OrionLib:MakeNotification({
+	Name = "SpookyHub!",
+	Content = "SpookyHub has loaded",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+local Window = OrionLib:MakeWindow({Name = "SpookyHub", HidePremium = false, SaveConfig = true, ConfigFolder = "SpookyHub", IntroEnabled = true, IntroText = "SpookyHub"})
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Spooky's Hitbox+Esp",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletriz/spooky.hook/main/release"))()
+  	end    
+})
+
+OrionLib:MakeNotification({
+	Name = "Spooky Hitbox+Esp",
+	Content = "Spooky Hitbox+Esp has loaded successfully",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
